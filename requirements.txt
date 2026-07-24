@@ -1,0 +1,4 @@
+requests>=2.31.0
+
+# Optional, only needed for --charts
+matplotlib>=3.7.0

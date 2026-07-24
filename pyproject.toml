@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-analyzer"
+version = "1.0.0"
+description = "Analyze GitHub repositories: stars, languages, contributors, commit activity, and more."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+dependencies = [
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+charts = ["matplotlib>=3.7.0"]
+dev = ["pytest>=7.0.0", "responses>=0.23.0"]
+
+[project.scripts]
+repo-analyzer = "repo_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["repo_analyzer*"]
